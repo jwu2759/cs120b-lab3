@@ -21,10 +21,10 @@ int main(void) {
 	//unsigned char tmpB = 0x00;
     while (1) {
 	tmpA = (PIND << 1) + (PINB & 0x01);
-	if(tmpA >= 0x46) PORTB = (PORTB & 0xF9) | 0x02;
-	else if(tmpA > 0x05 && tmpA < 0x46) PORTB = (PORTB & 0xF9) | 0x04;
-	else PORTB = (PORTB & 0xF9);
-	PORTB = (PORTB & 0xFE) | (PINB & 0x01);
+	if(tmpA >= 0x46) PORTB = (PORTB & 0xF8) | 0x02;
+	else if(tmpA > 0x05 && tmpA < 0x46) PORTB = (PORTB & 0xF8) | 0x04;
+	else PORTB = (PORTB & 0xF8);
+
     }
     return 1;
 }
