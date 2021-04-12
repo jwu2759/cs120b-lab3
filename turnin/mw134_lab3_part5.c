@@ -17,7 +17,7 @@ int main(void) {
 	DDRD = 0x00; PORTD = 0xFF;
 	DDRB = 0xFE; PORTB = 0x01;
     /* Insert your solution below */
-	unsigned char tmpA = 0x00;
+	unsigned short tmpA = 0x00;
 	//unsigned char tmpB = 0x00;
     while (1) {
 	tmpA = (PIND << 1) + (PINB & 0x01);

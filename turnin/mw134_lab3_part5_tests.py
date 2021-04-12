@@ -27,9 +27,9 @@ tests = [
     'steps': [ {'inputs': [('PIND',0x0F),('PINB',0x01)], 'iterations': 5 } ],
     'expected': [('PORTB',0x04)],
     },
-    {'description': 'PIND: 0x00 PINB = 0x01 => PORTB: 0x01',
-    'steps': [ {'inputs': [('PIND',0x00),('PINB',0x01)], 'iterations': 5 } ],
-    'expected': [('PORTB',0x00)],
+    {'description': 'PIND: 0x80 PINB = 0x00 => PORTB: 0x02',
+    'steps': [ {'inputs': [('PIND',0x80),('PINB',0x00)], 'iterations': 5 } ],
+    'expected': [('PORTB',0x02)],
     },
 
 
