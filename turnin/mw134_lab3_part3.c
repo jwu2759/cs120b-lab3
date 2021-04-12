@@ -23,6 +23,7 @@ int main(void) {
 	tmpA = PINA & 0x0F;
 	tmpB = PINA & 0x70;
 	if(tmpB == 0x30) PORTC = (PORTC & 0x7F) | 0x80;
+	else PORTC = (PORTC & 0x7F) | 0x00;
 	if(tmpA >= 0x0D) PORTC = (PORTC & 0x80) | 0x3F;
 	else if(tmpA >= 0x0A) PORTC = (PORTC & 0x80) | 0x3E;
 	else if(tmpA >= 0x07) PORTC = (PORTC & 0x80) | 0x3C;
